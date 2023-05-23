@@ -1,0 +1,27 @@
+<section class="py-4 flex justify-center items-center flex-col w-full">
+  <app-exchange-header
+          [currentFrom]="selectedCurrencyFrom"
+          [currentTo]="selectedCurrencyTo"></app-exchange-header>
+
+  <div class="mt-4">
+    <app-exchange-select
+            label="From"
+            [currData]="CurrencyData"
+            [selectedCurrency]="selectedCurrencyFrom"
+            [amountFrom]="amountFrom"
+            (selectedCurrencyChange)="onChangeCurrencyFrom($event)"
+            (amountChange)="onChangeAmountFrom($event)">
+    </app-exchange-select>
+
+    <app-exchange-select
+            label="To"
+            [currData]="CurrencyData"
+            [selectedCurrency]="selectedCurrencyTo"
+            [amountFrom]="amountTo"
+            (selectedCurrencyChange)="onChangeCurrencyTo($event)"
+            (amountChange)="onChangeAmountTo($event)">
+    </app-exchange-select>
+
+  </div>
+
+</section>

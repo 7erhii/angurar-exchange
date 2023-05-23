@@ -1,0 +1,12 @@
+
+
+<div class="mb-2 flex items-baseline gap-2">
+  <label class="block font-semibold ">{{ label }}</label>
+  <select class="block border border-gray-300 rounded p-2" [(ngModel)]="selectedCurrency"
+          (change)="handleChangeCurrency()">
+    <option *ngFor="let currency of currData" [ngValue]="currency">{{ currency.cc }}</option>
+  </select>
+  <input type="number" class="block border border-gray-300 rounded p-2 mt-2" [(ngModel)]="amountFrom"
+         (input)="handleConvertCurrency()">
+</div>
+

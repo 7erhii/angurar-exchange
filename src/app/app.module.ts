@@ -1,19 +1,23 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
+import { ExchangeComponent } from './exchange/exchange.component';
+import { ExchangeHeaderComponent } from './exchange-header/exchange-header.component';
+import { ExchangeSelectComponent } from './exchange-select/exchange-select.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ExchangeComponent,
+    ExchangeHeaderComponent,
+    ExchangeSelectComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule // Add FormsModule to the imports array
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
